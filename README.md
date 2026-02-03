@@ -111,7 +111,7 @@ Smoking là yếu tố nguy cơ chính và có sức ảnh hưởng lớn nhất
 
 ## 8. File đính kèm  
 - lung_cancer_dashboard.pbix
-- lung_cancer_presentation.ppt   
+- lung_cancer_presentation.pptx   
 - README.md  
 
 ---
