@@ -1,126 +1,137 @@
-# Lung Cancer Risk Factor Analysis  
-Tools: Power BI  
-Objective: Trực quan hóa dữ liệu để phân tích các yếu tố nguy cơ liên quan đến ung thư phổi, bao gồm lối sống, triệu chứng, bệnh nền và thông tin nhân khẩu học.
+# Lung Cancer Risk Factor Analysis
 
+**Tools:** Power BI  
+**Objective:** Visualize and analyze key risk factors associated with lung cancer, including Lifestyle, Symptoms, Genetic & Biological, General Health Symptoms.
 ---
 
-## 1. Giới thiệu dự án  
-Ung thư phổi là một trong những căn bệnh có tỷ lệ tử vong cao. Việc phân tích các yếu tố nguy cơ giúp nhận diện các dấu hiệu quan trọng, hỗ trợ tầm soát sớm và đưa ra các biện pháp phòng ngừa hiệu quả.
+## Project Overview
+Lung cancer is one of the leading causes of cancer-related mortality worldwide. Analyzing risk factors helps identify early warning signs, supports early screening, and provides insights for effective prevention strategies.
 
-Dự án này sử dụng Power BI để:
-- Làm sạch dữ liệu  
-- Trực quan hóa các yếu tố nguy cơ  
-- Khám phá mối quan hệ giữa triệu chứng, thói quen và mức độ nguy cơ  
-- Trình bày các insight theo từng nhóm yếu tố
-
+This project uses **Power BI** to:
+- Clean and transform the dataset  
+- Visualize lung cancer risk factors  
+- Explore relationships between symptoms, lifestyle habits, and risk levels  
+- Present insights across different factor groups
+  
 ---
 
-## 2. Dataset  
+## Dataset  
 <img width="503" height="409" alt="image" src="https://github.com/user-attachments/assets/876cd289-8f68-4c7e-a5c4-016d5e01c2fa" />
 <img width="506" height="411" alt="image" src="https://github.com/user-attachments/assets/c3dc5858-58e6-4509-9594-563edcc5fa6d" />
 
 ---
 
-## 3. Tiền xử lý dữ liệu (Data Cleaning trong Power BI)
+## Data Preprocessing (Power BI – Power Query)
 
-Các thao tác chính trong Power Query:
-- Dữ liệu bao gồm các thang đo khác nhau cho từng biến: thang đo 1-7, thang đo 1-8, thang đo 1-9 → Chuẩn hóa tất cả các biến liên quan đến sức khỏe về thang đo 0-1  
-- Chuẩn hóa định dạng dữ liệu  
-- Kiểm tra dữ liệu thiếu hoặc bất thường  
-- Tạo lại cấu trúc bảng theo nhóm biến (Lifestyle, Symptoms, Genetic & Biological, General Health Symptoms)  
-- Bổ sung cột phân loại mức độ nguy cơ (Risk Level) theo dữ liệu mẫu  
+Key data cleaning and transformation steps:
+- The dataset contains multiple measurement scales (1–7, 1–8, 1–9).  
+  → All health-related variables were normalized to a **0–1 scale** for consistency.  
+- Standardized data formats  
+- Checked for missing or abnormal values  
+- Restructured tables based on factor groups:
+  - Lifestyle  
+  - Symptoms  
+  - Genetic & Biological Factors  
+  - General Health Symptoms  
+- Created a **Risk Level** classification column based on the sample data   
 
 ---
 
-## 4. Dashboard trong Power BI  
+## Power BI Dashboard
 
-Dashboard được chia thành nhiều phần:
+The dashboard is divided into several analytical sections:
 
-### 4.1. Tổng quan dữ liệu  
-- Tỷ lệ mắc ung thư phổi theo giới tính  
-- Phân bố độ tuổi  
-- Phân bổ theo mức độ  
+### Data Overview
+- Lung cancer prevalence by gender  
+- Age group distribution  
+- Risk level distribution  
 
-### 4.2. Phân tích theo nhóm yếu tố  
+### Risk Factor Group Analysis
 - Lifestyle vs Lung Cancer  
 - Symptoms vs Lung Cancer  
-- Genetic & Biological
-- General Health Symptoms
+- Genetic & Biological Factors  
+- General Health Symptoms  
 
-### 4.3. Phân tích triệu chứng  
-- Tần suất xuất hiện các triệu chứng  
-- Số triệu chứng xuất hiện theo nhóm nguy cơ  
-- Mối liên hệ giữa triệu chứng và kết quả Lung Cancer  
+### Symptom Analysis
+- Frequency of symptom occurrence  
+- Number of symptoms by risk group  
+- Relationship between symptoms and lung cancer outcome  
 
-### 4.4. Correlation View  
-- Biểu đồ tương quan giữa các yếu tố nguy cơ  
-- Nhóm yếu tố ảnh hưởng mạnh nhất
+### Correlation Analysis
+- Correlation matrix of risk factors  
+- Identification of the most influential risk factors  
 
 ---
 
-## 5. Kết quả chính (Key Findings)
+## Key Findings
 
-### 5.1. Nhóm yếu tố nguy cơ mạnh nhất  
-Dựa trên biểu đồ tương quan và mức độ xuất hiện trong nhóm Lung Cancer = Yes:
+### Strongest Risk Factors
+Based on correlation analysis and frequency within the **Lung Cancer = Yes** group, the most influential factors are:
 
 1. Smoking  
 2. Chronic Disease  
 3. Wheezing  
-4. Shortness of breath  
-5. Chest pain  
-
-### 5.2. Nhân khẩu học  
-- Nam giới có tỷ lệ nguy cơ cao hơn nữ  
-- Nhóm 31–45 tuổi có tỷ lệ mắc cao nhất  
-
-### 5.3. Lối sống  
-- Smoking ảnh hưởng mạnh nhất  
-- Peer pressure có tác động gián tiếp lên tỷ lệ hút thuốc  
-- Alcohol có tác động nhưng yếu hơn các yếu tố khác  
-
-### 5.4. Nhóm triệu chứng  
-Những triệu chứng mang tính cảnh báo mạnh:
-- Khó thở  
-- Đau ngực  
-- Ho kéo dài  
-- Thở khò khè  
-
-Tổ hợp “khó thở + đau ngực” xuất hiện nhiều ở nhóm nguy cơ cao.
+4. Shortness of Breath  
+5. Chest Pain  
 
 ---
 
-## 6. Kết luận  
-Kết quả phân tích cho thấy ung thư phổi bị ảnh hưởng bởi:
-- Lối sống (đặc biệt là hút thuốc)  
-- Các triệu chứng hô hấp  
-- Bệnh nền hô hấp hoặc mãn tính  
-- Tuổi và giới tính  
-
-Smoking là yếu tố nguy cơ chính và có sức ảnh hưởng lớn nhất.
+### Demographic Insights
+- Males show a higher lung cancer risk than females  
+- The **31–45 age group** has the highest prevalence  
 
 ---
 
-## 7. Khuyến nghị  
-
-### Cho cộng đồng  
-- Giảm hoặc loại bỏ hút thuốc  
-- Chủ động khám khi xuất hiện triệu chứng kéo dài  
-- Chú ý nhóm người >45 tuổi hoặc có bệnh nền  
+### Lifestyle Factors
+- **Smoking** has the strongest impact on lung cancer risk  
+- **Peer pressure** indirectly increases risk by influencing smoking behavior  
+- **Alcohol consumption** has an impact, but weaker compared to other factors  
 
 ---
 
-## 8. File đính kèm  
-- lung_cancer_dashboard.pbix
-- lung_cancer_presentation.pptx   
-- README.md  
+### Symptom Patterns
+Key warning symptoms include:
+- Shortness of breath  
+- Chest pain  
+- Persistent cough  
+- Wheezing  
+
+The combination of **shortness of breath + chest pain** appears most frequently in the high-risk group.
 
 ---
 
-## 9. Kỹ năng sử dụng  
+## Conclusion
+The analysis shows that lung cancer risk is strongly influenced by:
+- Lifestyle factors (especially smoking)  
+- Respiratory symptoms  
+- Chronic or respiratory-related diseases  
+- Age and gender  
+
+Among all variables, **smoking is the dominant risk factor** with the greatest overall impact.
+
+---
+
+## Recommendations
+
+### For the Community
+- Reduce or eliminate smoking  
+- Seek medical screening when persistent symptoms appear  
+- Pay special attention to individuals aged **45+** or those with underlying health conditions  
+
+---
+
+## Attachments
+- `lung_cancer_dashboard.pbix` — Power BI dashboard  
+- `lung_cancer_presentation.pptx` — Presentation slides  
+- `README.md` — Project documentation  
+
+---
+
+## Skills Demonstrated
 - Power BI Data Cleaning (Power Query)  
 - Data Visualization  
 - Dashboard Design  
-- Phân tích tương quan  
-- Diễn giải insight  
-- Dựng báo cáo storytelling  
+- Correlation Analysis  
+- Insight Interpretation  
+- Analytical Storytelling  
 
