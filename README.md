@@ -47,10 +47,10 @@ The dashboard is divided into several analytical sections:
 - Risk level distribution  
 
 ### Risk Factor Group Analysis
-- Lifestyle vs Lung Cancer  
-- Symptoms vs Lung Cancer  
-- Genetic & Biological Factors  
-- General Health Symptoms  
+- Lifestyle vs Risk levels of Lung Cancer 
+- Symptoms vs Risk levels of Lung Cancer 
+- Genetic & Biological Factors vs Risk levels of Lung Cancer
+- General Health Symptoms vs Risk levels of Lung Cancer
 
 ### Symptom Analysis
 - Frequency of symptom occurrence  
